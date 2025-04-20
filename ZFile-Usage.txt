@@ -1,3 +1,6 @@
 
 
+Sign In using email and password:
+    HOST/users/signinEmailPass?people_group_refid={STR}&email={STR}&password={STR}
+    HOST/users/signout/{token}
 
