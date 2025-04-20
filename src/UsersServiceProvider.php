@@ -8,7 +8,9 @@ class UsersServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        //
+        $this->mergeConfigFrom(
+            __DIR__ . '/../config/database.php', 'people'  
+        );
     }
 
     public function boot(): void
@@ -18,5 +20,7 @@ class UsersServiceProvider extends ServiceProvider
         ], 'usersconfig-config');
         
         $this->loadRoutesFrom( __DIR__ . '/../routes/api.php');
+
+        config(['database.connections.conn_users' => config('people.database_connection')]);
     }
 }
