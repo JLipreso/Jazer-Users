@@ -1,5 +1,4 @@
 
-
 CREATE TABLE `people` (
   `dataid` int(26) NOT NULL,
   `project_refid` varchar(26) DEFAULT NULL,
@@ -15,7 +14,6 @@ CREATE TABLE `people` (
   `active` enum('0','1') NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
 CREATE TABLE `people_auth` (
   `dataid` int(10) NOT NULL,
   `project_refid` varchar(26) DEFAULT NULL,
@@ -27,6 +25,12 @@ CREATE TABLE `people_auth` (
   `blocked` enum('0','1') NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+CREATE TABLE `people_group` (
+  `dataid` int(10) NOT NULL,
+  `people_group_refid` varchar(26) DEFAULT NULL,
+  `name` varchar(30) DEFAULT NULL,
+  `description` varchar(80) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 ALTER TABLE `people`
   ADD PRIMARY KEY (`dataid`),
@@ -40,10 +44,10 @@ ALTER TABLE `people_group`
   ADD UNIQUE KEY `people_group_refid` (`people_group_refid`);
 
 ALTER TABLE `people`
-  MODIFY `dataid` int(26) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `dataid` int(26) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `people_auth`
-  MODIFY `dataid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
-
+  MODIFY `dataid` int(10) NOT NULL AUTO_INCREMENT;
+  
 ALTER TABLE `people_group`
-  MODIFY `dataid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `dataid` int(10) NOT NULL AUTO_INCREMENT;
