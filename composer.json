@@ -11,7 +11,7 @@
     "extra": {
         "laravel":{
             "providers": [
-                "Jazer\\Users\\UsersServiceProvider"
+                "Jazer\\Users\\Http\\Provider\\UsersServiceProvider"
             ]
         }
     },
