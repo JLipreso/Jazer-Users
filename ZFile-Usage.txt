@@ -1,9 +1,0 @@
-
-
-Sign In using email and password:
-    HOST/users/signinEmailPass?people_group_refid={STR}&email={STR}&password={STR}
-    HOST/users/signout/{token}
-    HOST/users/paginate?page=1&where={JSON}
-    HOST/users/single/{people_refid}
-    HOST/users/delete/{people_refid}
-
