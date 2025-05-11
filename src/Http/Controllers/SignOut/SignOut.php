@@ -12,7 +12,7 @@ class SignOut extends Controller
         $source = DB::connection("conn_users")
             ->table("people_auth")
             ->where([
-                ["project_refid", env('project_refid')],
+                ["project_refid", config('usersconfig.project_refid')],
                 ["people_auth_refid", $token],
                 ["active", "1"]
             ])

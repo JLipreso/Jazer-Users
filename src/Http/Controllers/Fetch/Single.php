@@ -13,7 +13,7 @@ class Single extends Controller
         ->table("people")
         ->select("project_refid", "people_group_refid", "people_refid", "firstname", "lastname", "email", "blocked", "active")
         ->where([
-            "project_refid"     => env('project_refid'),
+            "project_refid"     => config('usersconfig.project_refid'),
             "people_refid"      => $people_refid
         ])
         ->get();

@@ -15,7 +15,7 @@ class Paginate extends Controller
             ->table("people")
             ->select("project_refid", "people_group_refid", "people_refid", "firstname", "lastname", "email", "blocked", "active")
             ->where([
-                "project_refid"     => env('project_refid')
+                "project_refid"     => config('usersconfig.project_refid')
             ])
             ->where(json_decode($request['where']))
             ->orderBy("lastname", "ASC")
@@ -26,7 +26,7 @@ class Paginate extends Controller
             ->table("people")
             ->select("project_refid", "people_group_refid", "people_refid", "firstname", "lastname", "email", "blocked", "active")
             ->where([
-                "project_refid"     => env('project_refid')
+                "project_refid"     => config('usersconfig.project_refid')
             ])
             ->orderBy("lastname", "ASC")
             ->paginate(config('usersconfig.fetch_paginate_max'));

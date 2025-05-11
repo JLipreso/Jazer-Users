@@ -13,7 +13,7 @@ class EmailPassword extends Controller
             ->table("people")
             ->select("project_refid", "people_group_refid", "people_refid", "firstname", "lastname", "email", "blocked", "active")
             ->where([
-                "project_refid"     => env('project_refid'),
+                "project_refid"     => config('usersconfig.project_refid'),
                 "people_group_refid"=> $request['people_group_refid'],
                 "email"             => $request['email'],
                 "password"          => $request['password']
