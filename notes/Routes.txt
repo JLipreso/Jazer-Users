@@ -1,3 +1,5 @@
+Installation:
+composer require jazer/users@dev-main
 
 users/signinEmailPass?people_group_refid={STR}&email={STR}&password={STR}
 users/signout/{token}
