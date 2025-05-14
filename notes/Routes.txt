@@ -8,4 +8,5 @@ users/signout/{token}
 users/paginate?page=1&where={JSON}
 users/single/{people_refid}
 users/delete/{people_refid}
+users/registerBasic?people_group_refid={STR}&firstname={STR}&lastname={STR}&email={STR}&password={STR}&created_by={STR}
 
