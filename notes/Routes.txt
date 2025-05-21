@@ -1,7 +1,7 @@
 Installation:
 
 composer require jazer/users:dev-main
-php artisan vendor:publish --tag=usersconfig-config
+php artisan vendor:publish --tag=jazerusersconfig-config
 
 users/signinEmailPass?people_group_refid={STR}&email={STR}&password={STR}
 users/signout/{token}
