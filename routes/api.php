@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'api'], function () {
+    Route::group(['prefix' => 'auth'], function () {
+        Route::get('signinEmailPassBasic', function () {});
+        Route::get('signinEmailPassOTP', function () {});
+        Route::get('signout', function () {});
+    });
     Route::group(['prefix' => 'users'], function () {
         Route::get('signinEmailPass', [Jazer\Users\Http\Controllers\SignIn\EmailPassword::class, 'signin']);
         Route::get('signout/{token}', [Jazer\Users\Http\Controllers\SignOut\SignOut::class, 'signout']);
